@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Mecare – Hospital and Health HTML Template</title>
+    <title>BabaKaDhaba</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
@@ -74,7 +74,7 @@
             <div class="row align-items-center">
               <div class="col-xl-2 col-lg-2">
                 <div class="logo">
-                  <a href="/home"
+                  <a href="{% url 'home' %}"
                   ><img src="{% static 'img/logo/logo.png' %}" alt="logo"
                     /></a>
                 </div>
@@ -88,7 +88,7 @@
                       <li class="has-sub">
                         <a href="{% url 'home' %}">Home</a>
                       </li>
-                      <li><a href="{% url 'about' %}">About Us</a></li>
+                      <li><a href="#about">About Us</a></li>
                       <li class="has-sub">
                         <a href="{% url 'menu' %}">Menu</a>
                       </li>
@@ -103,41 +103,6 @@
             </div>
           </div>
         </div>
-        <!-- offcanvas-area -->
-        {% comment %} <div class="offcanvas-menu">
-          <span class="menu-close"><i class="fas fa-times"></i></span>
-          <form
-            role="search"
-            method="get"
-            id="searchform"
-            class="searchform"
-            action="http://wordpress.zcube.in/xconsulta/"
-          >
-            <input
-              type="text"
-              name="s"
-              id="search"
-              value=""
-              placeholder="Search"
-            />
-            <button><i class="fa fa-search"></i></button>
-          </form>
-
-          <div id="cssmenu2" class="menu-one-page-menu-container">
-            <ul id="menu-one-page-menu-1" class="menu">
-              <li
-                class="menu-item menu-item-type-custom menu-item-object-custom"
-              >
-                <a href="#home"><span>+8 12 3456897</span></a>
-              </li>
-              <li
-                class="menu-item menu-item-type-custom menu-item-object-custom"
-              >
-                <a href="#howitwork"><span>info@example.com</span></a>
-              </li>
-            </ul>
-          </div>
-        </div> {% endcomment %}
         <div class="offcanvas-overly"></div>
         <!-- offcanvas-end -->
       </div>
@@ -156,11 +121,11 @@
               <div class="row align-items-center">
                 <div class="col-xl-3 col-lg-5 col-md-5">
                   <div class="slider-content s-slider-content text-right">
-                    <h2 data-animation="fadeInUp" data-delay=".4s">
-                      <span>WE TAKE </span> PRIDE IN OUR FOOD
+                    <h2 style="font-size: 60px;" data-animation="fadeInUp" data-delay=".4s">
+                      <span>ENJOY </span>OUR TOMATO PIZZA
                     </h2>
                     <p data-animation="fadeInUp" data-delay=".6s">
-                      Made of fresh & premium ingredients
+                      Topped with fresh tomatoes, herbs, and our secret sauce.A crispy crust and melty cheese make it irresistible!
                     </p>
                     <div class="slider-btn mt-25 mb-30">
                       <a
@@ -185,7 +150,7 @@
                     <img src="{% static 'img/bg/pure-veg.png' %}" alt="header-img" style="height: 200px; width: 200px; transform: rotate(-30deg);" />
                   </div>
 
-                  <div class="overly-text">BabaKa Dhaba</div>
+                  <div class="overly-text">TOMATO PIZZA</div>
                 </div>
               </div>
             </div>
@@ -198,11 +163,11 @@
               <div class="row align-items-center">
                 <div class="col-xl-3 col-lg-5 col-md-5">
                   <div class="slider-content s-slider-content text-right">
-                    <h2 data-animation="fadeInUp" data-delay=".4s">
-                      <span>WE TAKE </span> PRIDE IN OUR FOOD
+                    <h2 style="font-size: 60px;" data-animation="fadeInUp" data-delay=".4s">
+                      <span>TRY OUR </span> VEG MOMO
                     </h2>
                     <p data-animation="fadeInUp" data-delay=".6s">
-                      Made of fresh & premium ingredients
+                      Steamed to perfection, filled with spiced vegetables.Served hot with our signature spicy chutney.
                     </p>
                     <div class="slider-btn mt-25 mb-30">
                       <a
@@ -227,7 +192,7 @@
                     <img src="{% static 'img/bg/pure-veg.png' %}" alt="header-img" style="height: 200px; width: 200px; transform: rotate(-30deg);" />
                   </div>
 
-                  <div class="overly-text">FRESH MEAL</div>
+                  <div class="overly-text">VEG MOMO</div>
                 </div>
               </div>
             </div>
@@ -240,11 +205,11 @@
               <div class="row align-items-center">
                 <div class="col-xl-3 col-lg-5 col-md-5">
                   <div class="slider-content s-slider-content text-right">
-                    <h2 data-animation="fadeInUp" data-delay=".4s">
-                      <span>WE TAKE </span> PRIDE IN OUR FOOD
+                    <h2 style="font-size: 60px;" data-animation="fadeInUp" data-delay=".4s">
+                      <span>CRISPY </span> GOBI MANCHURIAN
                     </h2>
                     <p data-animation="fadeInUp" data-delay=".6s">
-                      Made of fresh & premium ingredients
+                      Indo-Chinese delight with bold, tangy flavors.Perfect as a starter or evening snack!
                     </p>
                     <div class="slider-btn mt-25 mb-30">
                       <a
@@ -269,7 +234,7 @@
                     <img src="{% static 'img/bg/pure-veg.png' %}" alt="header-img" style="height: 200px; width: 200px; transform: rotate(-30deg);" />
                   </div>
 
-                  <div class="overly-text">FRESH MEAL</div>
+                  <div class="overly-text">GOBI MANCHURIAN</div>
                 </div>
               </div>
             </div>
@@ -282,11 +247,11 @@
               <div class="row align-items-center">
                 <div class="col-xl-3 col-lg-5 col-md-5">
                   <div class="slider-content s-slider-content text-right">
-                    <h2 data-animation="fadeInUp" data-delay=".4s">
-                      <span>WE TAKE </span> PRIDE IN OUR FOOD
+                    <h2 style="font-size: 60px;" data-animation="fadeInUp" data-delay=".4s">
+                      <span>RICH </span> PANEER BUTTER MASALA
                     </h2>
                     <p data-animation="fadeInUp" data-delay=".6s">
-                      Made of fresh & premium ingredients
+                      Creamy gravy with tender paneer cubes, a North Indian classic.Best enjoyed with hot naan or steamed rice.
                     </p>
                     <div class="slider-btn mt-25 mb-30">
                       <a
@@ -311,7 +276,7 @@
                     <img src="{% static 'img/bg/pure-veg.png' %}" alt="header-img" style="height: 200px; width: 200px; transform: rotate(-30deg);" />
                   </div>
 
-                  <div class="overly-text">FRESH MEAL</div>
+                  <div class="overly-text">PANEER-BUTTER MASALA</div>
                 </div>
               </div>
             </div>
@@ -478,13 +443,13 @@
                         <h5>
                           <a href="#">CRISPY FRIED CHICKEN</a>
                         </h5>
-                        <p>Hot, Big, Full Plater, Cosmos</p>
+                        <p>&#8377;13.00</p>
                       </div>
                       <div class="line">
                         <hr />
                       </div>
-                      <div class="meal-price">
-                        <a href="#" style="padding:10px 30px;">&#8377;13.00</a>
+                      <div class="meal-price" style="width:170px;">
+                        <a href="#" style="padding:10px;">ORDER NOW</a>
                       </div>
                     </div>
                   </li>
@@ -497,13 +462,13 @@
                         <h5>
                           <a href="#">CRISPY FRIED CHICKEN</a>
                         </h5>
-                        <p>Hot, Big, Full Plater, Cosmos</p>
+                        <p>&#8377;13.00</p>
                       </div>
                       <div class="line">
                         <hr />
                       </div>
-                      <div class="meal-price">
-                        <a href="#" style="padding:10px 30px;">&#8377;13.00</a>
+                      <div class="meal-price" style="width:170px;">
+                        <a href="#" style="padding:10px;">ORDER NOW</a>
                       </div>
                     </div>
                   </li>
@@ -516,13 +481,13 @@
                         <h5>
                           <a href="#">CRISPY FRIED CHICKEN</a>
                         </h5>
-                        <p>Hot, Big, Full Plater, Cosmos</p>
+                        <p>&#8377;13.00</p>
                       </div>
                       <div class="line">
                         <hr />
                       </div>
-                      <div class="meal-price">
-                        <a href="#" style="padding:10px 30px;">&#8377;13.00</a>
+                      <div class="meal-price" style="width:170px;">
+                        <a href="#" style="padding:10px;">ORDER NOW</a>
                       </div>
                     </div>
                   </li>
@@ -535,13 +500,13 @@
                         <h5>
                           <a href="#">CRISPY FRIED CHICKEN</a>
                         </h5>
-                        <p>Hot, Big, Full Plater, Cosmos</p>
+                        <p>&#8377;13.00</p>
                       </div>
                       <div class="line">
                         <hr />
                       </div>
-                      <div class="meal-price">
-                        <a href="#" style="padding:10px 30px;">&#8377;13.00</a>
+                      <div class="meal-price" style="width:170px;">
+                        <a href="#" style="padding:10px;">ORDER NOW</a>
                       </div>
                     </div>
                   </li>
@@ -554,13 +519,13 @@
                         <h5>
                           <a href="#">CRISPY FRIED CHICKEN</a>
                         </h5>
-                        <p>Hot, Big, Full Plater, Cosmos</p>
+                        <p>&#8377;13.00</p>
                       </div>
                       <div class="line">
                         <hr />
                       </div>
-                      <div class="meal-price">
-                        <a href="#" style="padding:10px 30px;">&#8377;13.00</a>
+                      <div class="meal-price" style="width:170px;">
+                        <a href="#" style="padding:10px;">ORDER NOW</a>
                       </div>
                     </div>
                   </li>
@@ -573,13 +538,13 @@
                         <h5>
                           <a href="#">CRISPY FRIED CHICKEN</a>
                         </h5>
-                        <p>Hot, Big, Full Plater, Cosmos</p>
+                        <p>&#8377;13.00</p>
                       </div>
                       <div class="line">
                         <hr />
                       </div>
-                      <div class="meal-price">
-                        <a href="#" style="padding:10px 30px;">&#8377;13.00</a>
+                      <div class="meal-price" style="width:170px;">
+                        <a href="#" style="padding:10px;">ORDER NOW</a>
                       </div>
                     </div>
                   </li>
@@ -592,13 +557,13 @@
                         <h5>
                           <a href="#">CRISPY FRIED CHICKEN</a>
                         </h5>
-                        <p>Hot, Big, Full Plater, Cosmos</p>
+                        <p>&#8377;13.00</p>
                       </div>
                       <div class="line">
                         <hr />
                       </div>
-                      <div class="meal-price">
-                        <a href="#" style="padding:10px 30px;">&#8377;13.00</a>
+                      <div class="meal-price" style="width:170px;">
+                        <a href="#" style="padding:10px;">ORDER NOW</a>
                       </div>
                     </div>
                   </li>
@@ -611,13 +576,13 @@
                         <h5>
                           <a href="#">CRISPY FRIED CHICKEN</a>
                         </h5>
-                        <p>Hot, Big, Full Plater, Cosmos</p>
+                        <p>&#8377;13.00</p>
                       </div>
                       <div class="line">
                         <hr />
                       </div>
-                      <div class="meal-price">
-                        <a href="#" style="padding:10px 30px;">&#8377;13.00</a>
+                      <div class="meal-price" style="width:170px;">
+                        <a href="#" style="padding:10px;">ORDER NOW</a>
                       </div>
                     </div>
                   </li>
@@ -633,302 +598,304 @@
             </div>
           </div>
         {% comment %} </div> {% endcomment %}
-      </section>
+        </section>
       <!-- Meal-area-end -->
       <!-- testimonial-area -->
-      <section
-        id="testimonios"
-        class="testimonial-area testimonial-p pt-120 pb-115 fix"
-      >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="title-about">
-                <div class="section-title mb-20">
-                  <span>TESTIMONIALS</span>
-                  <h2>SOME CUSTOMER FEEDBACKS</h2>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6"></div>
-          </div>
-
-          <div class="row justify-content-center">
-            <div class="col-lg-12">
-              <div class="testimonial-active">
-                <div class="single-testimonial">
-                  <div class="single-testimonial-bg">
-                    <div class="com-icon">
-                      <img src="{% static 'img/bg/comment-icon.png' %}" alt="img" />
-                    </div>
-                    <div class="star mb-30">
-                      <img src="{% static 'img/testimonial/star.png' %}" alt="img" />
-                    </div>
-                    <p>
-                      The best Kerala vegetarian meals I’ve ever had! Every dish tasted home-cooked, full of authentic flavor and love. A must-visit for anyone craving traditional sadya.
-                    </p>
-                    <div class="arrow-yellwo">
-                      <img src="{% static 'img/testimonial/arrow-box.png' %}" alt="img" />
-                    </div>
-                  </div>
-                  <div class="testi-author">
-                    <div class="ta-info">
-                      <h6>ANJALI RAVI</h6>
-                      <span>KOZHIKODE</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="single-testimonial">
-                  <div class="single-testimonial-bg">
-                    <div class="com-icon">
-                      <img src="{% static 'img/bg/comment-icon.png' %}" alt="img" />
-                    </div>
-                    <div class="star mb-30">
-                      <img src="{% static 'img/testimonial/star.png' %}" alt="img" />
-                    </div>
-                    <p>
-                      I was blown away by the variety and taste of the dishes. The banana leaf service and the sambhar reminded me of Onam at home. Great ambiance and polite staff too!
-                    </p>
-                    <div class="arrow-yellwo">
-                      <img src="{% static 'img/testimonial/arrow-box.png' %}" alt="img" />
-                    </div>
-                  </div>
-
-                  <div class="testi-author">
-                    <div class="ta-info">
-                      <h6>RAHUL DEV</h6>
-                      <span>ERNAKULAM</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="single-testimonial">
-                  <div class="single-testimonial-bg">
-                    <div class="com-icon">
-                      <img src="{% static 'img/bg/comment-icon.png' %}" alt="img" />
-                    </div>
-                    <div class="star mb-30">
-                      <img src="{% static 'img/testimonial/star.png' %}" alt="img" />
-                    </div>
-                    <p>
-                      Super clean, great service, and every item is pure veg and delicious. Their avial and payasam are next level. Highly recommended for families and tourists, Must visit.
-                    </p>
-                    <div class="arrow-yellwo">
-                      <img src="{% static 'img/testimonial/arrow-box.png' %}" alt="img" />
-                    </div>
-                  </div>
-
-                  <div class="testi-author">
-                    <div class="ta-info">
-                      <h6>NEETHU KUMAR</h6>
-                      <span>TRIVANDRUM</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="single-testimonial">
-                  <div class="single-testimonial-bg">
-                    <div class="com-icon">
-                      <img src="{% static 'img/bg/comment-icon.png' %}" alt="img" />
-                    </div>
-                    <div class="star mb-30">
-                      <img src="{% static 'img/testimonial/star.png' %}" alt="img" />
-                    </div>
-                    <p>
-                      From soft idlis to flavorful thalis, this place is an authentic, pure veg heaven. The aromatic spices are just right, and the atmosphere is peaceful and welcoming. Will definitely return.
-                    </p>
-                    <div class="arrow-yellwo">
-                      <img src="{% static 'img/testimonial/arrow-box.png' %}" alt="img" />
-                    </div>
-                  </div>
-                  <div class="testi-author">
-                    <div class="ta-info">
-                      <h6>MANOJ PILLAY</h6>
-                      <span>KOCHI</span>
-                    </div>
+        <section
+          id="testimonios"
+          class="testimonial-area testimonial-p pt-120 pb-115 fix"
+        >
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="title-about">
+                  <div class="section-title mb-20">
+                    <span>TESTIMONIALS</span>
+                    <h2>SOME CUSTOMER FEEDBACKS</h2>
                   </div>
                 </div>
               </div>
+              <div class="col-lg-6"></div>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <div class="testimonial-active">
+                  <div class="single-testimonial">
+                    <div class="single-testimonial-bg">
+                      <div class="com-icon">
+                        <img src="{% static 'img/bg/comment-icon.png' %}" alt="img" />
+                      </div>
+                      <div class="star mb-30">
+                        <img src="{% static 'img/testimonial/star.png' %}" alt="img" />
+                      </div>
+                      <p>
+                        The best Kerala vegetarian meals I’ve ever had! Every dish tasted home-cooked, full of authentic flavor and love. A must-visit for anyone craving traditional sadya.
+                      </p>
+                      <div class="arrow-yellwo">
+                        <img src="{% static 'img/testimonial/arrow-box.png' %}" alt="img" />
+                      </div>
+                    </div>
+                    <div class="testi-author">
+                      <div class="ta-info">
+                        <h6>ANJALI RAVI</h6>
+                        <span>KOZHIKODE</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="single-testimonial">
+                    <div class="single-testimonial-bg">
+                      <div class="com-icon">
+                        <img src="{% static 'img/bg/comment-icon.png' %}" alt="img" />
+                      </div>
+                      <div class="star mb-30">
+                        <img src="{% static 'img/testimonial/star.png' %}" alt="img" />
+                      </div>
+                      <p>
+                        I was blown away by the variety and taste of the dishes. The banana leaf service and the sambhar reminded me of Onam at home. Great ambiance and polite staff too!
+                      </p>
+                      <div class="arrow-yellwo">
+                        <img src="{% static 'img/testimonial/arrow-box.png' %}" alt="img" />
+                      </div>
+                    </div>
+
+                    <div class="testi-author">
+                      <div class="ta-info">
+                        <h6>RAHUL DEV</h6>
+                        <span>ERNAKULAM</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="single-testimonial">
+                    <div class="single-testimonial-bg">
+                      <div class="com-icon">
+                        <img src="{% static 'img/bg/comment-icon.png' %}" alt="img" />
+                      </div>
+                      <div class="star mb-30">
+                        <img src="{% static 'img/testimonial/star.png' %}" alt="img" />
+                      </div>
+                      <p>
+                        Super clean, great service, and every item is pure veg and delicious. Their avial and payasam are next level. Highly recommended for families and tourists, Must visit.
+                      </p>
+                      <div class="arrow-yellwo">
+                        <img src="{% static 'img/testimonial/arrow-box.png' %}" alt="img" />
+                      </div>
+                    </div>
+
+                    <div class="testi-author">
+                      <div class="ta-info">
+                        <h6>NEETHU KUMAR</h6>
+                        <span>TRIVANDRUM</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="single-testimonial">
+                    <div class="single-testimonial-bg">
+                      <div class="com-icon">
+                        <img src="{% static 'img/bg/comment-icon.png' %}" alt="img" />
+                      </div>
+                      <div class="star mb-30">
+                        <img src="{% static 'img/testimonial/star.png' %}" alt="img" />
+                      </div>
+                      <p>
+                        From soft idlis to flavorful thalis, this place is an authentic, pure veg heaven. The aromatic spices are just right, and the atmosphere is peaceful and welcoming. Will definitely return.
+                      </p>
+                      <div class="arrow-yellwo">
+                        <img src="{% static 'img/testimonial/arrow-box.png' %}" alt="img" />
+                      </div>
+                    </div>
+                    <div class="testi-author">
+                      <div class="ta-info">
+                        <h6>MANOJ PILLAY</h6>
+                        <span>KOCHI</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       <!-- testimonial-area-end -->
 
       <!-- team-area-->
-      <section
-        id="team"
-        class="pt-115 pb-40"
-        style="
-               background-image: url('{% static 'img/bg/test-bg.png' %}');
-               background-position: center;
-               background-repeat: no-repeat;
-               background-size: cover;
-              "
-      >
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-8 col-lg-8">
-              <div class="section-title text-center mb-70">
-                <span> TEAM </span>
-                <h2>OUR CHEFS</h2>
-                <p class="mt-10"><img src="{% static 'img/bg/line.png' %}" alt="line" /></p>
+        <section
+          id="team"
+          class="pt-115 pb-40"
+          style="
+                 background-image: url('{% static 'img/bg/test-bg.png' %}');
+                 background-position: center;
+                 background-repeat: no-repeat;
+                 background-size: cover;
+                "
+        >
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-xl-8 col-lg-8">
+                <div class="section-title text-center mb-70">
+                  <span> TEAM </span>
+                  <h2>OUR CHEFS</h2>
+                  <p class="mt-10"><img src="{% static 'img/bg/line.png' %}" alt="line" /></p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-md-4">
+                <div class="single-team mb-30">
+                  <div class="team-thumb">
+                    <div class="brd">
+                      <img src="{% static 'img/team/team02.png' %}" alt="img" />
+                    </div>
+                  </div>
+                  <div class="team-info text-center">
+                    <div class="num">01</div>
+                    <h4>HARI PRASAD</h4>
+                    <p>HEAD CHEF</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-md-4">
+                <div class="single-team mb-30">
+                  <div class="team-thumb">
+                    <div class="brd">
+                      <img src="{% static 'img/team/team02.png' %}" alt="img" />
+                    </div>
+                  </div>
+                  <div class="team-info text-center">
+                    <div class="num">02</div>
+                    <h4>HARI PRASAD</h4>
+                    <p>HEAD CHEF</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-md-4">
+                <div class="single-team mb-30">
+                  <div class="team-thumb">
+                    <div class="brd">
+                      <img src="{% static 'img/team/team02.png' %}" alt="img" />
+                    </div>
+                  </div>
+                  <div class="team-info text-center">
+                    <div class="num">03</div>
+                    <h4>HARI PRASAD</h4>
+                    <p>HEAD CHEF</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xl-4 col-md-4">
-              <div class="single-team mb-30">
-                <div class="team-thumb">
-                  <div class="brd">
-                    <img src="{% static 'img/team/team02.png' %}" alt="img" />
+        </section>
+      <!-- team-area-end -->
+      </main>
+    <!-- main-area-end -->
+    <!-- footer -->
+      <footer class="footer-bg footer-p">
+        <div
+          class="footer-top pt-120 pb-200"
+        >
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-xl-4 col-lg-4 col-sm-6">
+                <div class="footer-widget text-center mb-30">
+                  <div class="flog mt-50 mb-30">
+                    <a href="#"><img src="{% static 'img/logo/logo.png' %}" alt="logo" /></a>
                   </div>
-                </div>
-                <div class="team-info text-center">
-                  <div class="num">01</div>
-                  <h4>HARI PRASAD</h4>
-                  <p>HEAD CHEF</p>
+                  <div class="footer-text mb-20">
+                    <p>
+                      Sed ut perspiciatis unde om is nerror sit voluptatem
+                      accustium dolorem tium totam rem aperam eaque ipsa quae ab
+                      illose inntore veritatis
+                    </p>
+                  </div>
+                  <div class="footer-social mt-30">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      {% comment %} <a href="#"><i class="fab fa-twitter"></i></a> {% endcomment %}
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                      {% comment %} <a href="#"><i class="fab fa-google-plus-g"></i></a> {% endcomment %}
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-xl-4 col-md-4">
-              <div class="single-team mb-30">
-                <div class="team-thumb">
-                  <div class="brd">
-                    <img src="{% static 'img/team/team02.png' %}" alt="img" />
+              <div class="col-xl-4 col-lg-4 col-sm-6">
+                <div class="footer-widget mb-30 text-center">
+                  <div class="f-time-icon">
+                    <img src="{% static 'img/bg/time-bg.png' %}" alt="logo" />
                   </div>
-                </div>
-                <div class="team-info text-center">
-                  <div class="num">02</div>
-                  <h4>HARI PRASAD</h4>
-                  <p>HEAD CHEF</p>
+                  <div class="f-widget-title mt-100">
+                    <span>AVAILABLE</span>
+                    <h5>OPENING HOURS</h5>
+                  </div>
+                  <div class="footer-link">
+                    <div class="f-time">
+                      <ul>
+                        <li>
+                          <div class="day">MONDAY</div>
+                          <div class="time">9.00 - 22.00</div>
+                        </li>
+                        <li>
+                          <div class="day">TUESDAY</div>
+                          <div class="time">9.00 - 22.00</div>
+                        </li>
+                        <li>
+                          <div class="day">SATURDAY</div>
+                          <div class="time">9.00 - 22.00</div>
+                        </li>
+                        <li>
+                          <div class="day">SUNDAY</div>
+                          <div class="time">9.00 - 22.00</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-xl-4 col-md-4">
-              <div class="single-team mb-30">
-                <div class="team-thumb">
-                  <div class="brd">
-                    <img src="{% static 'img/team/team02.png' %}" alt="img" />
+              <div class="col-xl-4 col-lg-4 col-sm-6">
+                <div class="footer-widget mb-30 text-center">
+                  <div class="f-contact-icon">
+                    <img src="{% static 'img/bg/f-contact-icon.png' %}" alt="logo" />
                   </div>
-                </div>
-                <div class="team-info text-center">
-                  <div class="num">03</div>
-                  <h4>HARI PRASAD</h4>
-                  <p>HEAD CHEF</p>
+                  <div class="f-widget-title mt-100">
+                    <span>CONTACT</span>
+                    <h5>GET IN TOUCH</h5>
+                  </div>
+                  <div class="footer-link">
+                    <div class="f-contact">
+                      <p>Helipad North Cliff, Varkala, Kerala 695141</p>
+                      <a href="https://www.google.com/maps/dir/?api=1&destination=Baba+Ka+Dhaba+Varkala" target="_blank" class="btn ss-btn mt-20">GET DIRECTIONS</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- team-area-end -->
-        </main>
-    <!-- main-area-end -->
-    <!-- footer -->
-        <footer class="footer-bg footer-p">
-          <div
-            class="footer-top pt-120 pb-200"
-          >
-            <div class="container">
-              <div class="row align-items-center">
-                <div class="col-xl-4 col-lg-4 col-sm-6">
-                  <div class="footer-widget text-center mb-30">
-                    <div class="flog mt-50 mb-30">
-                      <a href="#"><img src="{% static 'img/logo/logo.png' %}" alt="logo" /></a>
-                    </div>
-                    <div class="footer-text mb-20">
-                      <p>
-                        Sed ut perspiciatis unde om is nerror sit voluptatem
-                        accustium dolorem tium totam rem aperam eaque ipsa quae ab
-                        illose inntore veritatis
-                      </p>
-                    </div>
-                    <div class="footer-social mt-30">
-                      <a href="#"><i class="fab fa-facebook-f"></i></a>
-                      {% comment %} <a href="#"><i class="fab fa-twitter"></i></a> {% endcomment %}
-                      <a href="#"><i class="fab fa-instagram"></i></a>
-                      {% comment %} <a href="#"><i class="fab fa-google-plus-g"></i></a> {% endcomment %}
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-sm-6">
-                  <div class="footer-widget mb-30 text-center">
-                    <div class="f-time-icon">
-                      <img src="{% static 'img/bg/time-bg.png' %}" alt="logo" />
-                    </div>
-                    <div class="f-widget-title mt-100">
-                      <span>AVAILABLE</span>
-                      <h5>OPENING HOURS</h5>
-                    </div>
-                    <div class="footer-link">
-                      <div class="f-time">
-                        <ul>
-                          <li>
-                            <div class="day">MONDAY</div>
-                            <div class="time">9.00 - 22.00</div>
-                          </li>
-                          <li>
-                            <div class="day">TUESDAY</div>
-                            <div class="time">9.00 - 22.00</div>
-                          </li>
-                          <li>
-                            <div class="day">SATURDAY</div>
-                            <div class="time">9.00 - 22.00</div>
-                          </li>
-                          <li>
-                            <div class="day">SUNDAY</div>
-                            <div class="time">9.00 - 22.00</div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-sm-6">
-                  <div class="footer-widget mb-30 text-center">
-                    <div class="f-contact-icon">
-                      <img src="{% static 'img/bg/f-contact-icon.png' %}" alt="logo" />
-                    </div>
-                    <div class="f-widget-title mt-100">
-                      <span>CONTACT</span>
-                      <h5>GET IN TOUCH</h5>
-                    </div>
-                    <div class="footer-link">
-                      <div class="f-contact">
-                        <p>12/7Aabot, Poor Street, New York United States</p>
-                        <a href="#" class="btn ss-btn mt-20">GET DIRECTIONS</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
+      </footer>
     <!-- footer-end -->
 
     <!-- JS here -->
     <!-- JS here -->
-        <script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
-        <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
-        <script src="{% static 'js/popper.min.js' %}"></script>
-        <script src="{% static 'js/bootstrap.min.js' %}"></script>
-        <script src="{% static 'js/one-page-nav-min.js' %}"></script>
-        <script src="{% static 'js/jquery.meanmenu.min.js' %}"></script>
-        <script src="{% static 'js/slick.min.js' %}"></script>
-        <script src="{% static 'js/ajax-form.js' %}"></script>
-        <script src="{% static 'js/paroller.js' %}"></script>
-        <script src="{% static 'js/wow.min.js' %}"></script>
-        <script src="{% static 'js/js_isotope.pkgd.min.js' %}"></script>
-        <script src="{% static 'js/imagesloaded.min.js' %}"></script>
-        <script src="{% static 'js/parallax.min.js' %}"></script>
-        <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
-        <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
-        <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
-        <script src="{% static 'js/parallax-scroll.js' %}"></script>
-        <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-        <script src="{% static 'js/element-in-view.js' %}"></script>
-        <script src="{% static 'js/jquery.nice-select.js' %}"></script>
-        <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
-        <script src="{% static 'js/main.js' %}"></script>
-      </body>
-    </html>
+      <script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+      <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'js/one-page-nav-min.js' %}"></script>
+      <script src="{% static 'js/jquery.meanmenu.min.js' %}"></script>
+      <script src="{% static 'js/slick.min.js' %}"></script>
+      <script src="{% static 'js/ajax-form.js' %}"></script>
+      <script src="{% static 'js/paroller.js' %}"></script>
+      <script src="{% static 'js/wow.min.js' %}"></script>
+      <script src="{% static 'js/js_isotope.pkgd.min.js' %}"></script>
+      <script src="{% static 'js/imagesloaded.min.js' %}"></script>
+      <script src="{% static 'js/parallax.min.js' %}"></script>
+      <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+      <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+      <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+      <script src="{% static 'js/parallax-scroll.js' %}"></script>
+      <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+      <script src="{% static 'js/element-in-view.js' %}"></script>
+      <script src="{% static 'js/jquery.nice-select.js' %}"></script>
+      <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+      <script src="{% static 'js/main.js' %}"></script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XC3C5J9MC6"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XC3C5J9MC6'); </script>
+    </body>
+  </html>
