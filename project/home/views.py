@@ -11,3 +11,6 @@ def contact(request):
 
 def menu(request):
     return render(request, 'menu.html')
+
+def general_breakfast(request):
+    return render(request, 'general-breakfast.html')
