@@ -187,11 +187,44 @@
             </div>
           </div>
           <select name="menu-category" id="menu-category" class="form-select my-2 bg-dark">
-            <option value="{% url 'menu' %}" {% if request.path == '/menu/' %}selected{% endif %} class="populer">POPULER</option>
+              <option class="populer" value="{% url 'menu' %}" {% if request.path == '/menu/' %}selected{% endif %}>GENERAL BREAKFAST</option>
             <optgroup label="Breakfast">
-              <option value="{% url 'general-breakfast' %}" {% if request.path == '/menu/general-breakfast' %}selected{% endif %}>General Breakfast</option>
-              <option>South Indian Breakfast</option>
-              <option>North Indian Breakfast</option>
+             <option value="{% url 'general-breakfast' %}" {% if request.path == '/menu/general-breakfast' %}selected{% endif %}>General Breakfast</option>
+             <option value="{% url 'south_indianbreakfast' %}" {% if request.path == '/menu/south-indian-breakfast' %}selected{% endif %}>South Indian Breakfast</option>
+             <option value="{% url 'north_indianbreakfast' %}" {% if request.path == '/menu/north_indianbreakfast' %}selected{% endif %}>North Indian Breakfast</option>
+             <option value="{% url 'starter' %}" {% if request.path == '/menu/starter/' %}selected{% endif %}>Starter</option>
+             <option value="{% url 'soup' %}" {% if request.path == '/menu/soup/' %}selected{% endif %}>Soup</option>
+             <option value="{% url 'salad' %}" {% if request.path == '/menu/salad/' %}selected{% endif %}>Salad</option>
+             <option value="{% url 'nsgravy' %}" {% if request.path == '/menu/nsgravy/' %}selected{% endif %}>North-South Gravy</option>
+             <option value="{% url 'randb' %}" {% if request.path == '/menu/randb/' %}selected{% endif %}>Rice and Biryani</option>
+             <option value="{% url 'tandoori' %}" {% if request.path == '/menu/tandoori/' %}selected{% endif %}>Tandoori</option>
+             <option value="{% url 'bread' %}" {% if request.path == '/menu/bread/' %}selected{% endif %}>Bread</option>
+             <option value="{% url 'noodles' %}" {% if request.path == '/menu/noodles/' %}selected{% endif %}>Noodles</option>
+             <option value="{% url 'momo' %}" {% if request.path == '/menu/momo/' %}selected{% endif %}>Momo</option>
+             <option value="{% url 'pizza' %}" {% if request.path == '/menu/pizza/' %}selected{% endif %}>Pizza</option>
+             <option value="{% url 'pasta' %}" {% if request.path == '/menu/pasta/' %}selected{% endif %}>Pasta</option>
+             <option value="{% url 'sizzler' %}" {% if request.path == '/menu/sizzler/' %}selected{% endif %}>Sizzler</option>
+             <option value="{% url 'lasagna' %}" {% if request.path == '/menu/lasagna/' %}selected{% endif %}>Lasagna</option>
+             <option value="{% url 'sandw' %}" {% if request.path == '/menu/sandw/' %}selected{% endif %}>Sandwich</option>
+             <option value="{% url 'smoothie' %}" {% if request.path == '/menu/smoothie/' %}selected{% endif %}>Smoothie</option>
+             <option value="{% url 'specialdesert' %}" {% if request.path == '/menu/specialdesert/' %}selected{% endif %}>Special Dessert</option>
+             <option value="{% url 'laasi' %}" {% if request.path == '/menu/laasi/' %}selected{% endif %}>Lassi</option>
+             <option value="{% url 'aeratedbeverage' %}" {% if request.path == '/menu/aeratedbeverage/' %}selected{% endif %}>Aerated Beverage</option>
+             <option value="{% url 'bakerysweets' %}" {% if request.path == '/menu/bakerysweets/' %}selected{% endif %}>Bakery Sweets</option>
+             <option value="{% url 'burger' %}" {% if request.path == '/menu/burger/' %}selected{% endif %}>Burger</option>
+             <option value="{% url 'coffee' %}" {% if request.path == '/menu/coffee/' %}selected{% endif %}>Coffee</option>
+             <option value="{% url 'coldcoffee' %}" {% if request.path == '/menu/coldcoffee/' %}selected{% endif %}>Cold Coffee</option>
+             <option value="{% url 'freshjuice' %}" {% if request.path == '/menu/freshjuice/' %}selected{% endif %}>Fresh Juice</option>
+             <option value="{% url 'fruitssalad' %}" {% if request.path == '/menu/fruitssalad/' %}selected{% endif %}>Fruits Salad</option>
+             <option value="{% url 'fruitswine' %}" {% if request.path == '/menu/fruitswine/' %}selected{% endif %}>Fruits Wine</option>
+             <option value="{% url 'healthyjuice' %}" {% if request.path == '/menu/healthyjuice/' %}selected{% endif %}>Healthy Juice</option>
+             <option value="{% url 'healthysalad' %}" {% if request.path == '/menu/healthysalad/' %}selected{% endif %}>Healthy Salad</option>
+             <option value="{% url 'hotdrink' %}" {% if request.path == '/menu/hotdrink/' %}selected{% endif %}>Hot Drink</option>
+             <option value="{% url 'icetea' %}" {% if request.path == '/menu/icetea/' %}selected{% endif %}>Ice Tea</option><option value="{% url 'mocktail' %}" {% if request.path == '/menu/mocktail/' %}selected{% endif %}>Mocktail</option><option value="{% url 'pancakes' %}" {% if request.path == '/menu/pancakes/' %}selected{% endif %}>Pancakes</option>
+             <option value="{% url 'raita' %}" {% if request.path == '/menu/raita/' %}selected{% endif %}>Raita</option>
+             <option value="{% url 'shake' %}" {% if request.path == '/menu/shake/' %}selected{% endif %}>Shake</option>
+
+
             </optgroup>
 
             <optgroup label="Beverages">
@@ -242,295 +275,298 @@
             </optgroup>
           </select>
 {% comment %}------------------------------------------ BREAKFAST ---------------------------------------------------{% endcomment %}
+<div <div class="populer-meal">
+  <h5 style="text-align: center; text-transform: uppercase; font-size: 30px; color: #FFCE1C;">Breakfast</h5>
+  <p class="mt-10" style="text-align: center;">
+    <img src="{% static 'img/bg/line-2.png' %}" alt="line" />
+  </p>
 
-          <div class="row align-items-center mt-5">
-            <div class="col-lg-12 col-md-12">
-              <div class="populer-meal">
-                <h5 style="text-align: center; text-transform: uppercase; font-size: 30px; color: #FFCE1C;">Breakfast</h5>
-                <p class="mt-10"  style="text-align: center;">
-                  <img src="{% static 'img/bg/line-2.png' %}" alt="line" />
-                </p>
-                <ul>
-                  <li>
-                    <div class="meal-container">
-                      <div class="meal-img">
-                        <img
-                          src="{% static 'img/breakfast/b1.png' %}"
-                          style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
-                          alt="img"
-                        />
-                      </div>
-                      <div class="meal-content">
-                        <h5>
-                          <a href="#">BUTTER & JAM TOAST</a>
-                        </h5>
-                        <p>&#8377;100.00</p>
-                      </div>
-                      <div class="line">
-                        <hr />
-                      </div>
-                      <div class="meal-price" style="min-width: 150px">
-                        <a href="#" style="padding: 10px">ORDER NOW</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="meal-container">
-                      <div class="meal-img">
-                        <img
-                          src="{% static 'img/breakfast/b2.png' %}"
-                          style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
-                          alt="img"
-                        />
-                      </div>
-                      <div class="meal-content">
-                        <h5>
-                          <a href="#">MUESLI WITH FRUITS CURD & HONEY</a>
-                        </h5>
-                        <p>&#8377;200.00</p>
-                      </div>
-                      <div class="line">
-                        <hr />
-                      </div>
-                      <div class="meal-price" style="min-width: 150px">
-                        <a href="#" style="padding: 10px;">ORDER NOW</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="meal-container">
-                      <div class="meal-img">
-                        <img
-                          src="{% static 'img/breakfast/b3.png' %}"
-                          style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
-                          alt="img"
-                        />
-                      </div>
-                      <div class="meal-content">
-                        <h5>
-                          <a href="#">CORNFLAKES WITH COLD MILK</a>
-                        </h5>
-                        <p>&#8377;150.00</p>
-                      </div>
-                      <div class="line">
-                        <hr />
-                      </div>
-                      <div class="meal-price" style="min-width: 150px">
-                        <a href="#" style="padding: 10px;">ORDER NOW</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="meal-container">
-                      <div class="meal-img">
-                        <img
-                          src="{% static 'img/breakfast/b4.png' %}"
-                          style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
-                          alt="img"
-                        />
-                      </div>
-                      <div class="meal-content">
-                        <h5>
-                          <a href="#">PEANUT BUTTER TOAST</a>
-                        </h5>
-                        <p>&#8377;140.00</p>
-                      </div>
-                      <div class="line">
-                        <hr />
-                      </div>
-                      <div class="meal-price" style="min-width: 150px">
-                        <a href="#" style="padding: 10px">ORDER NOW</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="meal-container">
-                      <div class="meal-img">
-                        <img
-                          src="{% static 'img/breakfast/b5.png' %}"
-                          style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
-                          alt="img"
-                        />
-                      </div>
-                      <div class="meal-content">
-                        <h5>
-                          <a href="#">AVACADO TOAST</a>
-                        </h5>
-                        <p>&#8377;280.00</p>
-                      </div>
-                      <div class="line">
-                        <hr />
-                      </div>
-                      <div class="meal-price" style="min-width: 150px">
-                        <a href="#" style="padding: 10px">ORDER NOW</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="meal-container">
-                      <div class="meal-img">
-                        <img
-                          src="{% static 'img/breakfast/b6.png' %}"
-                          style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
-                          alt="img"
-                        />
-                      </div>
-                      <div class="meal-content">
-                        <h5>
-                          <a href="#">OATS PLAIN </a>
-                        </h5>
-                        <p>&#8377;150.00</p>
-                      </div>
-                      <div class="line">
-                        <hr />
-                      </div>
-                      <div class="meal-price" style="min-width: 150px">
-                        <a href="#" style="padding: 10px">ORDER NOW</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="meal-container">
-                      <div class="meal-img">
-                        <img
-                          src="{% static 'img/breakfast/b7.png' %}"
-                          style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
-                          alt="img"
-                        />
-                      </div>
-                      <div class="meal-content">
-                        <h5>
-                          <a href="#">OATS WITH FRUIT</a>
-                        </h5>
-                        <p>&#8377;250.00</p>
-                      </div>
-                      <div class="line">
-                        <hr />
-                      </div>
-                      <div class="meal-price" style="min-width: 150px">
-                        <a href="#" style="padding: 10px">ORDER NOW</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="meal-container">
-                      <div class="meal-img">
-                        <img
-                          src="{% static 'img/breakfast/b8.png' %}"
-                          style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
-                          alt="img"
-                        />
-                      </div>
-                      <div class="meal-content">
-                        <h5>
-                          <a href="#">FRENCH TOAST</a>
-                        </h5>
-                        <p>&#8377;140.00</p>
-                      </div>
-                      <div class="line">
-                        <hr />
-                      </div>
-                      <div class="meal-price" style="min-width: 150px">
-                        <a href="#" style="padding: 10px">ORDER NOW</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="meal-container">
-                      <div class="meal-img">
-                        <img
-                          src="{% static 'img/breakfast/b8.png' %}"
-                          style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
-                          alt="img"
-                        />
-                      </div>
-                      <div class="meal-content">
-                        <h5>
-                          <a href="#">FRENCH TOAST</a>
-                        </h5>
-                        <p>&#8377;140.00</p>
-                      </div>
-                      <div class="line">
-                        <hr />
-                      </div>
-                      <div class="meal-price" style="min-width: 150px">
-                        <a href="#" style="padding: 10px">ORDER NOW</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="meal-container">
-                      <div class="meal-img">
-                        <img
-                          src="{% static 'img/breakfast/b9.jpg' %}"
-                          style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
-                          alt="img"
-                        />
-                      </div>
-                      <div class="meal-content">
-                        <h5>
-                          <a href="#">FRENCH TOAST</a>
-                        </h5>
-                        <p>&#8377;140.00</p>
-                      </div>
-                      <div class="line">
-                        <hr />
-                      </div>
-                      <div class="meal-price" style="min-width: 150px">
-                        <a href="#" style="padding: 10px">ORDER NOW</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="meal-container">
-                      <div class="meal-img">
-                        <img
-                          src="{% static 'img/breakfast/b8.png' %}"
-                          style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
-                          alt="img"
-                        />
-                      </div>
-                      <div class="meal-content">
-                        <h5>
-                          <a href="#">FRENCH TOAST</a>
-                        </h5>
-                        <p>&#8377;140.00</p>
-                      </div>
-                      <div class="line">
-                        <hr />
-                      </div>
-                      <div class="meal-price" style="min-width: 150px">
-                        <a href="#" style="padding: 10px">ORDER NOW</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="meal-container">
-                      <div class="meal-img">
-                        <img
-                          src="{% static 'img/breakfast/b8.png' %}"
-                          style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
-                          alt="img"
-                        />
-                      </div>
-                      <div class="meal-content">
-                        <h5>
-                          <a href="#">FRENCH TOAST</a>
-                        </h5>
-                        <p>&#8377;140.00</p>
-                      </div>
-                      <div class="line">
-                        <hr />
-                      </div>
-                      <div class="meal-price" style="min-width: 150px">
-                        <a href="#" style="padding: 10px">ORDER NOW</a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+  <!-- Pair 1 -->
+  <div class="row mt-4">
+    <div class="col-lg-6">
+      <div class="meal-container">
+        <div class="meal-img">
+          <img
+            src="{% static 'img/breakfast/b1.png' %}"
+            alt="BUTTER & JAM TOAST"
+            style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
+          />
+        </div>
+        <div class="meal-content">
+          <h5><a href="#">BUTTER & JAM TOAST</a></h5>
+          <p>&#8377;100.00</p>
+        </div>
+        <div class="line"><hr /></div>
+        <div class="meal-price" style="min-width: 150px;">
+          <a href="#" style="padding: 10px;">ORDER NOW</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="meal-container">
+        <div class="meal-img">
+          <img
+            src="{% static 'img/breakfast/b2.png' %}"
+            alt="MUESLI WITH FRUITS CURD & HONEY"
+            style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
+          />
+        </div>
+        <div class="meal-content">
+          <h5><a href="#">MUESLI WITH FRUITS CURD & HONEY</a></h5>
+          <p>&#8377;200.00</p>
+        </div>
+        <div class="line"><hr /></div>
+        <div class="meal-price" style="min-width: 150px;">
+          <a href="#" style="padding: 10px;">ORDER NOW</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pair 2 -->
+  <div class="row mt-4">
+    <div class="col-lg-6">
+      <div class="meal-container">
+        <div class="meal-img">
+          <img
+            src="{% static 'img/breakfast/b3.png' %}"
+            alt="CORNFLAKES WITH COLD MILK"
+            style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
+          />
+        </div>
+        <div class="meal-content">
+          <h5><a href="#">CORNFLAKES WITH COLD MILK</a></h5>
+          <p>&#8377;150.00</p>
+        </div>
+        <div class="line"><hr /></div>
+        <div class="meal-price" style="min-width: 150px;">
+          <a href="#" style="padding: 10px;">ORDER NOW</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="meal-container">
+        <div class="meal-img">
+          <img
+            src="{% static 'img/breakfast/b4.png' %}"
+            alt="PEANUT BUTTER TOAST"
+            style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
+          />
+        </div>
+        <div class="meal-content">
+          <h5><a href="#">PEANUT BUTTER TOAST</a></h5>
+          <p>&#8377;140.00</p>
+        </div>
+        <div class="line"><hr /></div>
+        <div class="meal-price" style="min-width: 150px;">
+          <a href="#" style="padding: 10px;">ORDER NOW</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pair 3 -->
+  <div class="row mt-4">
+    <div class="col-lg-6">
+      <div class="meal-container">
+        <div class="meal-img">
+          <img
+            src="{% static 'img/breakfast/b5.png' %}"
+            alt="AVOCADO TOAST"
+            style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
+          />
+        </div>
+        <div class="meal-content">
+          <h5><a href="#">AVOCADO TOAST</a></h5>
+          <p>&#8377;280.00</p>
+        </div>
+        <div class="line"><hr /></div>
+        <div class="meal-price" style="min-width: 150px;">
+          <a href="#" style="padding: 10px;">ORDER NOW</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="meal-container">
+        <div class="meal-img">
+          <img
+            src="{% static 'img/breakfast/b6.png' %}"
+            alt="OATS PLAIN"
+            style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
+          />
+        </div>
+        <div class="meal-content">
+          <h5><a href="#">OATS PLAIN</a></h5>
+          <p>&#8377;150.00</p>
+        </div>
+        <div class="line"><hr /></div>
+        <div class="meal-price" style="min-width: 150px;">
+          <a href="#" style="padding: 10px;">ORDER NOW</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pair 4 -->
+  <div class="row mt-4">
+    <div class="col-lg-6">
+      <div class="meal-container">
+        <div class="meal-img">
+          <img
+            src="{% static 'img/breakfast/b7.png' %}"
+            alt="OATS WITH FRUIT"
+            style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
+          />
+        </div>
+        <div class="meal-content">
+          <h5><a href="#">OATS WITH FRUIT</a></h5>
+          <p>&#8377;250.00</p>
+        </div>
+        <div class="line"><hr /></div>
+        <div class="meal-price" style="min-width: 150px;">
+          <a href="#" style="padding: 10px;">ORDER NOW</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="meal-container">
+        <div class="meal-img">
+          <img
+            src="{% static 'img/breakfast/b8.png' %}"
+            alt="FRENCH TOAST"
+            style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
+          />
+        </div>
+        <div class="meal-content">
+          <h5><a href="#">FRENCH TOAST</a></h5>
+          <p>&#8377;140.00</p>
+        </div>
+        <div class="line"><hr /></div>
+        <div class="meal-price" style="min-width: 150px;">
+          <a href="#" style="padding: 10px;">ORDER NOW</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pair 5 -->
+  <div class="row mt-4">
+    <div class="col-lg-6">
+      <div class="meal-container">
+        <div class="meal-img">
+          <img
+            src="{% static 'img/breakfast/b9.jpeg' %}"
+            alt="REGULAR BREAKFAST"
+            style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
+          />
+        </div>
+        <div class="meal-content">
+          <h5><a href="#">REGULAR BREAKFAST</a></h5>
+          <p>&#8377;300.00</p>
+        </div>
+        <div class="line"><hr /></div>
+        <div class="meal-price" style="min-width: 150px;">
+          <a href="#" style="padding: 10px;">ORDER NOW</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="meal-container">
+        <div class="meal-img">
+          <img
+            src="{% static 'img/breakfast/b10.jpeg' %}"
+            alt="NUTELLA TOAST"
+            style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
+          />
+        </div>
+        <div class="meal-content">
+          <h5><a href="#">NUTELLA TOAST</a></h5>
+          <p>&#8377;160.00</p>
+        </div>
+        <div class="line"><hr /></div>
+        <div class="meal-price" style="min-width: 150px;">
+          <a href="#" style="padding: 10px;">ORDER NOW</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pair 6 -->
+  <div class="row mt-4">
+    <div class="col-lg-6">
+      <div class="meal-container">
+        <div class="meal-img">
+          <img
+            src="{% static 'img/breakfast/b11.jpeg' %}"
+            alt="CHEESE TOAST"
+            style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
+          />
+        </div>
+        <div class="meal-content">
+          <h5><a href="#">CHEESE TOAST</a></h5>
+          <p>&#8377;140.00</p>
+        </div>
+        <div class="line"><hr /></div>
+        <div class="meal-price" style="min-width: 150px;">
+          <a href="#" style="padding: 10px;">ORDER NOW</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="meal-container">
+        <div class="meal-img">
+          <img
+            src="{% static 'img/breakfast/b12.jpeg' %}"
+            alt="CHEESE TOMATO TOAST"
+            style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
+          />
+        </div>
+        <div class="meal-content">
+          <h5><a href="#">CHEESE TOMATO TOAST</a></h5>
+          <p>&#8377;150.00</p>
+        </div>
+        <div class="line"><hr /></div>
+        <div class="meal-price" style="min-width: 150px;">
+          <a href="#" style="padding: 10px;">ORDER NOW</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pair 7 -->
+  <div class="row mt-4 mb-5">
+    <div class="col-lg-6">
+      <div class="meal-container">
+        <div class="meal-img">
+          <img
+            src="{% static 'img/breakfast/b13.jpeg' %}"
+            alt="BAKED BEAN ON TOAST"
+            style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;"
+          />
+        </div>
+        <div class="meal-content">
+          <h5><a href="#">BAKED BEAN ON TOAST</a></h5>
+          <p>&#8377;160.00</p>
+        </div>
+        <div class="line"><hr /></div>
+        <div class="meal-price" style="min-width: 150px;">
+          <a href="#" style="padding: 10px;">ORDER NOW</a>
+        </div>
+      </div>
+    </div>
+    <!-- You can add a blank or empty column here if you want symmetrical spacing -->
+    <div class="col-lg-6"></div>
+  </div>
+</div>
+
+       
+
           {% comment %}------------------------------------------ END-BREAKFAST ---------------------------------------------------{% endcomment %}
         </section>
       <!-- Meal-area-end -->

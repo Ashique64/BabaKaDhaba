@@ -1,0 +1,590 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+  <!-- Mirrored from htmldemo.zcubethemes.com/thesignatures/menu.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 13 May 2025 10:23:03 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>BabaKaDhaba</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <!-- Place favicon.ico in the root Internist, General Practitonery -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" />
+    <link rel="stylesheet" href="{% static 'fontawesome/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/dripicons.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/default.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/meanmenu.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" />
+    <link
+      href="{% static 'css/bootstrap-datepicker.min.css' %}"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+
+    <style>
+      .meal-container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #menu-category {
+        padding: 16px 42px;
+        color: white;
+        text-transform: uppercase;
+
+      }
+
+      #menu-category .populer {
+        font-weight: bold;
+        color: #FFCE1C;
+      }
+      #menu-category optgroup {
+        text-transform: uppercase;
+        color: #FFCE1C;
+      }
+      #menu-category optgroup option {
+        color: white;
+      }
+      #menu-category optgroup option:hover {
+        background: #FFCE1C;
+      }
+
+      select::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      select::-webkit-scrollbar-thumb {
+        background-color: #999;
+        border-radius: 10px;
+      }
+
+      select::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+
+      @media (max-width: 576px) {
+        .section-title h2{
+          font-size: 36px;
+        }
+      }
+      @media (max-width: 767px) {
+        .meal-container {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header-area">
+      <div id="header-sticky" class="menu-area">
+        <div class="container">
+          <div class="second-menu">
+            <div class="row align-items-center">
+              <div class="col-xl-2 col-lg-2">
+                <div class="logo">
+                  <a href="{% url 'home' %}"
+                  ><img src="{% static 'img/logo/logo.png' %}" alt="logo"
+                    /></a>
+                </div>
+              </div>
+              <div class="col-xl-5 col-lg-7">
+                <div class="main-menu text-right pr-15">
+                  <nav id="mobile-menu">
+                    <ul>
+                      <li class="has-sub">
+                        <a href="{% url 'home' %}">Home</a>
+                      </li>
+                      <li><a href="{% url 'home' %}#about">About Us</a></li>
+                      <li class="has-sub">
+                        <a href="{% url 'menu' %}">Menu</a>
+                      </li>
+                      <li><a href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              {% comment %}
+              <div class="col-xl-2 col-lg-2 d-none d-xl-block">
+                <a href="contact.html" class="btn ss-btn">BOOK SEAT</a>
+              </div>
+              {% endcomment %}
+              <div class="col-12">
+                <div class="mobile-menu"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- offcanvas-area -->
+        <div class="offcanvas-overly"></div>
+        <!-- offcanvas-end -->
+      </div>
+    </header>
+    <!-- header-end -->
+    <!-- main-area -->
+    <main>
+      <!-- breadcrumb-area -->
+      <section
+        class="breadcrumb-area d-flex align-items-center"
+        style="
+               background-image: url('{% static 'img/bg/test-bg.png' %}');
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: cover;
+              "
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+              <div class="breadcrumb-wrap text-center">
+                <div class="breadcrumb-title mt-100 mb-30">
+                  <h2>Menu</h2>
+                </div>
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="{% url 'home' %}">HEALTHY JUICE</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      HEALTHY JUICE
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- breadcrumb-area-end -->
+      <!-- Meal-area-start -->
+      <section
+        class="meal-select-section pt-120 pb-120"
+      >
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-8">
+              <div class="section-title text-center pl-40 pr-40 mb-65">
+                <span>HEALTHY JUICE</span>
+                <h2>EXPLORE YOUR FAVORITE DISHES</h2>
+                <p class="mt-10">
+                  <img src="{% static 'img/bg/line.png' %}" alt="line" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <select name="menu-category" id="menu-category" class="form-select my-2 bg-dark">
+             <option class="populer" value="{% url 'menu' %}" {% if request.path == '/menu/' %}selected{% endif %}>HEALTHY JUICE</option>
+            <optgroup label="Breakfast">
+             <option value="{% url 'general-breakfast' %}" {% if request.path == '/menu/general-breakfast' %}selected{% endif %}>General Breakfast</option>
+             <option value="{% url 'south_indianbreakfast' %}" {% if request.path == '/menu/south-indian-breakfast' %}selected{% endif %}>South Indian Breakfast</option>
+             <option value="{% url 'north_indianbreakfast' %}" {% if request.path == '/menu/north_indianbreakfast' %}selected{% endif %}>North Indian Breakfast</option>
+             <option value="{% url 'starter' %}" {% if request.path == '/menu/starter/' %}selected{% endif %}>Starter</option>
+             <option value="{% url 'soup' %}" {% if request.path == '/menu/soup/' %}selected{% endif %}>Soup</option>
+             <option value="{% url 'salad' %}" {% if request.path == '/menu/salad/' %}selected{% endif %}>Salad</option>
+             <option value="{% url 'nsgravy' %}" {% if request.path == '/menu/nsgravy/' %}selected{% endif %}>North-South Gravy</option>
+             <option value="{% url 'randb' %}" {% if request.path == '/menu/randb/' %}selected{% endif %}>Rice and Biryani</option>
+             <option value="{% url 'tandoori' %}" {% if request.path == '/menu/tandoori/' %}selected{% endif %}>Tandoori</option>
+             <option value="{% url 'bread' %}" {% if request.path == '/menu/bread/' %}selected{% endif %}>Bread</option>
+             <option value="{% url 'noodles' %}" {% if request.path == '/menu/noodles/' %}selected{% endif %}>Noodles</option>
+             <option value="{% url 'momo' %}" {% if request.path == '/menu/momo/' %}selected{% endif %}>Momo</option>
+             <option value="{% url 'pizza' %}" {% if request.path == '/menu/pizza/' %}selected{% endif %}>Pizza</option>
+             <option value="{% url 'pasta' %}" {% if request.path == '/menu/pasta/' %}selected{% endif %}>Pasta</option>
+             <option value="{% url 'sizzler' %}" {% if request.path == '/menu/sizzler/' %}selected{% endif %}>Sizzler</option>
+             <option value="{% url 'lasagna' %}" {% if request.path == '/menu/lasagna/' %}selected{% endif %}>Lasagna</option>
+             <option value="{% url 'sandw' %}" {% if request.path == '/menu/sandw/' %}selected{% endif %}>Sandwich</option>
+             <option value="{% url 'smoothie' %}" {% if request.path == '/menu/smoothie/' %}selected{% endif %}>Smoothie</option>
+             <option value="{% url 'specialdesert' %}" {% if request.path == '/menu/specialdesert/' %}selected{% endif %}>Special Dessert</option>
+             <option value="{% url 'laasi' %}" {% if request.path == '/menu/laasi/' %}selected{% endif %}>Lassi</option>
+             <option value="{% url 'aeratedbeverage' %}" {% if request.path == '/menu/aeratedbeverage/' %}selected{% endif %}>Aerated Beverage</option>
+             <option value="{% url 'bakerysweets' %}" {% if request.path == '/menu/bakerysweets/' %}selected{% endif %}>Bakery Sweets</option>
+             <option value="{% url 'burger' %}" {% if request.path == '/menu/burger/' %}selected{% endif %}>Burger</option>
+             <option value="{% url 'coffee' %}" {% if request.path == '/menu/coffee/' %}selected{% endif %}>Coffee</option>
+             <option value="{% url 'coldcoffee' %}" {% if request.path == '/menu/coldcoffee/' %}selected{% endif %}>Cold Coffee</option>
+             <option value="{% url 'freshjuice' %}" {% if request.path == '/menu/freshjuice/' %}selected{% endif %}>Fresh Juice</option>
+             <option value="{% url 'fruitssalad' %}" {% if request.path == '/menu/fruitssalad/' %}selected{% endif %}>Fruits Salad</option>
+             <option value="{% url 'fruitswine' %}" {% if request.path == '/menu/fruitswine/' %}selected{% endif %}>Fruits Wine</option>
+             <option value="{% url 'healthyjuice' %}" {% if request.path == '/menu/healthyjuice/' %}selected{% endif %}>Healthy Juice</option>
+             <option value="{% url 'healthysalad' %}" {% if request.path == '/menu/healthysalad/' %}selected{% endif %}>Healthy Salad</option>
+             <option value="{% url 'hotdrink' %}" {% if request.path == '/menu/hotdrink/' %}selected{% endif %}>Hot Drink</option>
+             <option value="{% url 'icetea' %}" {% if request.path == '/menu/icetea/' %}selected{% endif %}>Ice Tea</option><option value="{% url 'mocktail' %}" {% if request.path == '/menu/mocktail/' %}selected{% endif %}>Mocktail</option><option value="{% url 'pancakes' %}" {% if request.path == '/menu/pancakes/' %}selected{% endif %}>Pancakes</option>
+             <option value="{% url 'raita' %}" {% if request.path == '/menu/raita/' %}selected{% endif %}>Raita</option>
+             <option value="{% url 'shake' %}" {% if request.path == '/menu/shake/' %}selected{% endif %}>Shake</option>
+
+
+
+            </optgroup>
+
+            <optgroup label="Beverages">
+              <option>Hot Drinks</option>
+              <option>Coffee</option>
+              <option>Cold Coffee</option>
+              <option>Iced Tea</option>
+              <option>Fresh Juice</option>
+              <option>Lassi</option>
+              <option>Shakes</option>
+              <option>Smoothies</option>
+              <option>Healthy Juice</option>
+              <option>Mocktails</option>
+              <option>Aerated Beverages</option>
+              <option>Fruit Wine (120ml)</option>
+            </optgroup>
+
+            <optgroup label="Salads & Light Bites">
+              <option>Fruit Salad</option>
+              <option>Healthy Salad</option>
+              <option>Soups</option>
+              <option>Starters</option>
+            </optgroup>
+
+            <optgroup label="Snacks & Continental">
+              <option>Pancakes</option>
+              <option>Sandwiches & Wraps</option>
+              <option>Burgers</option>
+              <option>Momos</option>
+              <option>Noodles</option>
+              <option>Pizza</option>
+              <option>Pasta</option>
+              <option>Lasagne</option>
+              <option>Sizzlers</option>
+            </optgroup>
+
+            <optgroup label="Main Course">
+              <option>Rice & Biryani</option>
+              <option>Indian Breads</option>
+              <option>Raita</option>
+              <option>Tandoori</option>
+              <option>Indian Gravy (Veg)</option>
+            </optgroup>
+
+            <optgroup label="Desserts & Sweets">
+              <option>Special Desserts</option>
+              <option>Bakery & Sweets</option>
+            </optgroup>
+          </select>
+
+          <div class="row align-items-center mt-5">
+  <div class="col-lg-12 col-md-12">
+    <div class="populer-meal">
+      <h5 style="text-align: center; text-transform: uppercase; font-size: 30px; color: #FFCE1C;">HEALTHY JUICE</h5>
+      <p class="mt-10" style="text-align: center;">
+        <img src="{% static 'img/bg/line-2.png' %}" alt="line" />
+      </p>
+      <ul>
+
+        <li>
+          <div class="meal-container">
+            <div class="meal-img">
+              <img src="{% static 'img/healthyjuice/anti inflamatory juice.jpg' %}" style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;" alt="ANTI INFLAMMATORY" />
+            </div>
+            <div class="meal-content">
+              <h5><a href="#">ANTI INFLAMMATORY</a></h5>
+              <p>&#8377;200.00</p>
+            </div>
+            <div class="line"><hr /></div>
+            <div class="meal-price" style="min-width: 150px"><a href="#" style="padding: 10px">ORDER NOW</a></div>
+          </div>
+        </li>
+
+        <li>
+          <div class="meal-container">
+            <div class="meal-img">
+              <img src="{% static 'img/healthyjuice/hangover healthy juice.jpg' %}" style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;" alt="HANGOVER" />
+            </div>
+            <div class="meal-content">
+              <h5><a href="#">HANGOVER</a></h5>
+              <p>&#8377;200.00</p>
+            </div>
+            <div class="line"><hr /></div>
+            <div class="meal-price" style="min-width: 150px"><a href="#" style="padding: 10px">ORDER NOW</a></div>
+          </div>
+        </li>
+
+        <li>
+          <div class="meal-container">
+            <div class="meal-img">
+              <img src="{% static 'img/healthyjuice/relaxation healthy juice.jpg' %}" style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;" alt="RELAXATION" />
+            </div>
+            <div class="meal-content">
+              <h5><a href="#">RELAXATION</a></h5>
+              <p>&#8377;200.00</p>
+            </div>
+            <div class="line"><hr /></div>
+            <div class="meal-price" style="min-width: 150px"><a href="#" style="padding: 10px">ORDER NOW</a></div>
+          </div>
+        </li>
+
+        <li>
+          <div class="meal-container">
+            <div class="meal-img">
+              <img src="{% static 'img/healthyjuice/improve imune healthy juice.jpg' %}" style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;" alt="IMPROVE IMMUNE SYSTEM" />
+            </div>
+            <div class="meal-content">
+              <h5><a href="#">IMPROVE IMMUNE SYSTEM</a></h5>
+              <p>&#8377;200.00</p>
+            </div>
+            <div class="line"><hr /></div>
+            <div class="meal-price" style="min-width: 150px"><a href="#" style="padding: 10px">ORDER NOW</a></div>
+          </div>
+        </li>
+        
+        <li>
+          <div class="meal-container">
+            <div class="meal-img">
+              <img src="{% static 'img/healthyjuice/improve digestion healthy juice.jpg' %}" style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;" alt="IMPROVING DIGESTION" />
+            </div>
+            <div class="meal-content">
+              <h5><a href="#">IMPROVING DIGESTION</a></h5>
+              <p>&#8377;200.00</p>
+            </div>
+            <div class="line"><hr /></div>
+            <div class="meal-price" style="min-width: 150px"><a href="#" style="padding: 10px">ORDER NOW</a></div>
+          </div>
+        </li>
+        
+        <li>
+          <div class="meal-container">
+            <div class="meal-img">
+              <img src="{% static 'img/healthyjuice/skin tonic healthy juice.jpg' %}" style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;" alt="SKIN TONIC" />
+            </div>
+            <div class="meal-content">
+              <h5><a href="#">SKIN TONIC</a></h5>
+              <p>&#8377;200.00</p>
+            </div>
+            <div class="line"><hr /></div>
+            <div class="meal-price" style="min-width: 150px"><a href="#" style="padding: 10px">ORDER NOW</a></div>
+          </div>
+        </li>
+
+        <li>
+          <div class="meal-container">
+            <div class="meal-img">
+              <img src="{% static 'img/healthyjuice/fruit punch healthy juice.jpg' %}" style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;" alt="FRUIT PUNCH" />
+            </div>
+            <div class="meal-content">
+              <h5><a href="#">FRUIT PUNCH</a></h5>
+              <p>&#8377;200.00</p>
+            </div>
+            <div class="line"><hr /></div>
+            <div class="meal-price" style="min-width: 150px"><a href="#" style="padding: 10px">ORDER NOW</a></div>
+          </div>
+        </li>
+        
+        <li>
+          <div class="meal-container">
+            <div class="meal-img">
+              <img src="{% static 'img/healthyjuice/yoga juice healthy juice.jpg' %}" style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;" alt="YOGI JUICE" />
+            </div>
+            <div class="meal-content">
+              <h5><a href="#">YOGI JUICE</a></h5>
+              <p>&#8377;200.00</p>
+            </div>
+            <div class="line"><hr /></div>
+            <div class="meal-price" style="min-width: 150px"><a href="#" style="padding: 10px">ORDER NOW</a></div>
+          </div>
+        </li>
+        
+        <li>
+          <div class="meal-container">
+            <div class="meal-img">
+              <img src="{% static 'img/healthyjuice/body purifier healthy juice.jpg' %}" style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;" alt="BODY PURIFIER" />
+            </div>
+            <div class="meal-content">
+              <h5><a href="#">BODY PURIFIER</a></h5>
+              <p>&#8377;200.00</p>
+            </div>
+            <div class="line"><hr /></div>
+            <div class="meal-price" style="min-width: 150px"><a href="#" style="padding: 10px">ORDER NOW</a></div>
+          </div>
+        </li>
+
+        <li>
+          <div class="meal-container">
+            <div class="meal-img">
+              <img src="{% static 'img/healthyjuice/super detox healthy  juice.jpg' %}" style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;" alt="SUPER DETOX" />
+            </div>
+            <div class="meal-content">
+              <h5><a href="#">SUPER DETOX</a></h5>
+              <p>&#8377;200.00</p>
+            </div>
+            <div class="line"><hr /></div>
+            <div class="meal-price" style="min-width: 150px"><a href="#" style="padding: 10px">ORDER NOW</a></div>
+          </div>
+        </li>
+
+        <li>
+          <div class="meal-container">
+            <div class="meal-img">
+              <img src="{% static 'img/healthyjuice/orientsal magic healthy juice.jpg' %}" style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;" alt="ORIENTAL MAGIC" />
+            </div>
+            <div class="meal-content">
+              <h5><a href="#">ORIENTAL MAGIC</a></h5>
+              <p>&#8377;200.00</p>
+            </div>
+            <div class="line"><hr /></div>
+            <div class="meal-price" style="min-width: 150px"><a href="#" style="padding: 10px">ORDER NOW</a></div>
+          </div>
+        </li>
+
+        <li>
+          <div class="meal-container">
+            <div class="meal-img">
+              <img src="{% static 'img/healthyjuice/abc healthy juice.jpg' %}" style="border-radius: 15px; object-fit: cover; min-width: 80px; max-width: 84px; height: 82px;" alt="ABC" />
+            </div>
+            <div class="meal-content">
+              <h5><a href="#">ABC</a></h5>
+              <p>&#8377;200.00</p>
+            </div>
+            <div class="line"><hr /></div>
+            <div class="meal-price" style="min-width: 150px"><a href="#" style="padding: 10px">ORDER NOW</a></div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+           </section>
+      <!-- Meal-area-end -->
+      </main>
+    <!-- main-area-end -->
+    <!-- footer -->
+      <footer class="footer-bg footer-p">
+        <div
+          class="footer-top pt-120 pb-200"
+        >
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-xl-4 col-lg-4 col-sm-6">
+                <div class="footer-widget text-center mb-30">
+                  <div class="flog mt-50 mb-30">
+                    <a href="#"><img src="{% static 'img/logo/logo.png' %}" alt="logo" /></a>
+                  </div>
+                  <div class="footer-text mb-20">
+                    <p>
+                      Sed ut perspiciatis unde om is nerror sit voluptatem
+                      accustium dolorem tium totam rem aperam eaque ipsa quae ab
+                      illose inntore veritatis
+                    </p>
+                  </div>
+                  <div class="footer-social mt-30">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  {% comment %} <a href="#"><i class="fab fa-twitter"></i></a> {% endcomment %}
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                  {% comment %} <a href="#"><i class="fab fa-google-plus-g"></i></a> {% endcomment %}
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-sm-6">
+                <div class="footer-widget mb-30 text-center">
+                  <div class="f-time-icon">
+                    <img src="{% static 'img/bg/time-bg.png' %}" alt="logo" />
+                  </div>
+                  <div class="f-widget-title mt-100">
+                    <span>AVAILABLE</span>
+                    <h5>OPENING HOURS</h5>
+                  </div>
+                  <div class="footer-link">
+                    <div class="f-time">
+                      <ul>
+                        <li>
+                          <div class="day">MONDAY</div>
+                          <div class="time">9.00 - 22.00</div>
+                        </li>
+                        <li>
+                          <div class="day">TUESDAY</div>
+                          <div class="time">9.00 - 22.00</div>
+                        </li>
+                        <li>
+                          <div class="day">SATURDAY</div>
+                          <div class="time">9.00 - 22.00</div>
+                        </li>
+                        <li>
+                          <div class="day">SUNDAY</div>
+                          <div class="time">9.00 - 22.00</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-sm-6">
+                <div class="footer-widget mb-30 text-center">
+                  <div class="f-contact-icon">
+                    <img src="{% static 'img/bg/f-contact-icon.png' %}" alt="logo" />
+                  </div>
+                  <div class="f-widget-title mt-100">
+                    <span>CONTACT</span>
+                    <h5>GET IN TOUCH</h5>
+                  </div>
+                  <div class="footer-link">
+                    <div class="f-contact">
+                      <p>Helipad North Cliff, Varkala, Kerala 695141</p>
+                      <a href="https://www.google.com/maps/dir/?api=1&destination=Baba+Ka+Dhaba+Varkala" target="_blank" class="btn ss-btn mt-20">GET DIRECTIONS</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <!-- footer-end -->
+
+    <!-- JS here -->
+    <!-- JS here -->
+      <script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+      <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'js/one-page-nav-min.js' %}"></script>
+      <script src="{% static 'js/jquery.meanmenu.min.js' %}"></script>
+      <script src="{% static 'js/slick.min.js' %}"></script>
+      <script src="{% static 'js/ajax-form.js' %}"></script>
+      <script src="{% static 'js/paroller.js' %}"></script>
+      <script src="{% static 'js/wow.min.js' %}"></script>
+      <script src="{% static 'js/js_isotope.pkgd.min.js' %}"></script>
+      <script src="{% static 'js/imagesloaded.min.js' %}"></script>
+      <script src="{% static 'js/parallax.min.js' %}"></script>
+      <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+      <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+      <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+      <script src="{% static 'js/parallax-scroll.js' %}"></script>
+      <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+      <script src="{% static 'js/element-in-view.js' %}"></script>
+      <script src="{% static 'js/jquery.nice-select.js' %}"></script>
+      <script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+      <script src="{% static 'js/main.js' %}"></script>
+
+      <script>
+        document.getElementById("menu-category").addEventListener("change", function () {
+          const url = this.value;
+          if (url) {
+            window.location.href = url;
+          }
+        });
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XC3C5J9MC6"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XC3C5J9MC6'); </script>
+    </body>
+  </html>
+
+
+
